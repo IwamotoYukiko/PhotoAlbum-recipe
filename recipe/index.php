@@ -29,12 +29,11 @@ if($status==false){
     $view .= "<p>";
     if($imginfo){
       $view .= '<img src="data:' . $imginfo['mime'] . ';base64,'.$enc_img.'" style="width:400px;height:320px;">';
-		}
+    }
     $view .= "</p>";
     $view .= '<p>【材料】<br>'.$result["material"].'</p>';
     $view .= '<p>【作り方】<br>'.$result["method"].'</p>';
     $view .= '<p>【メモ】<br>'.$result["memo"].'</p>';
-    $view .= '<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>';
     $view .= "</div>";
   }
 }
@@ -66,7 +65,6 @@ if($status==false){
     $view_meat .= '<p>【材料】<br>'.$result["material"].'</p>';
     $view_meat .= '<p>【作り方】<br>'.$result["method"].'</p>';
     $view_meat .= '<p>【メモ】<br>'.$result["memo"].'</p>';
-    $view_meat .= '<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>';
     $view_meat .= "</div>";
   }
 }
@@ -97,7 +95,6 @@ if($status==false){
     $view_fish .= '<p>【材料】<br>'.$result["material"].'</p>';
     $view_fish .= '<p>【作り方】<br>'.$result["method"].'</p>';
     $view_fish .= '<p>【メモ】<br>'.$result["memo"].'</p>';
-    $view_fish .= '<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>';
     $view_fish .= "</div>";
   }
 }
@@ -128,7 +125,6 @@ if($status==false){
     $view_sidedis .= '<p>【材料】<br>'.$result["material"].'</p>';
     $view_sidedis .= '<p>【作り方】<br>'.$result["method"].'</p>';
     $view_sidedis .= '<p>【メモ】<br>'.$result["memo"].'</p>';
-    $view_sidedis .= '<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>';
     $view_sidedis .= "</div>";
   }
 }
@@ -152,7 +148,7 @@ if($status==false){
 
     <div class="header">
         <img src="top.jpg" class="top-img">
-        <h1>レシピ記録</h1>
+        <h1>recipe note</h1>
     </div>
 
 
@@ -162,13 +158,16 @@ if($status==false){
         </div>
 
         <div class="side">
-          <input type="button" onclick="window.open('form.php')" class="f_btn" value="レシピ追加"> 
+          <ul class="menu">
+            <li onclick="window.open('form.php')"><img src="pen.png" class="side-icon"><p>レシピ追加</p></li>
+          </ul>
 
-            <h2>レシピ一覧</h2>
-            <p><button class="j_btn" id="meat">お肉のおかず</button></p>
-            <p><button class="j_btn"id="fish">魚介のおかず</button></p>
-            <p><button class="j_btn"id="sidedis">副菜</button></p>
-            
+            <h2>レシピ検索</h2>
+          <ul class="menu">
+            <li id="meat"><img src="icon.png" class="side-icon"><p>お肉のおかず</p></li>
+            <li id="fish"><img src="fish.png" class="side-icon"><p>お魚のおかず</p></li>
+            <li id="sidedis"><img src="leaf.png" class="side-icon"><p>副菜</p></li>
+          </ul>
       
             
         </div>
@@ -179,6 +178,8 @@ if($status==false){
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
+
+$("h1").fadeIn(4000);
 
 $('#meat').click(function() {
      $('.main').html('<?=$view_meat?>');
