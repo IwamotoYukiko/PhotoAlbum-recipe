@@ -15,11 +15,9 @@ if($status==false){
   $error = $stmt->errorInfo();
   exit("ErrorQuery:".$error[2]);
 }else{
-  //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
     $enc_img = base64_encode($result["upfile"]);
 		try {
-			//ここの@マークはエラーを出さないおまじないみたいなものなので一旦気にしないでください！
 			$imginfo = @getimagesize('data:application/octet-stream;base64,' . $enc_img);
 		} catch(Exception $e) {
 			$imginfo = false;
