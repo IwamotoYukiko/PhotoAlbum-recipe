@@ -1,0 +1,266 @@
+body{
+   background-color: #000; 
+   font-family: 'Courier New', monospace;
+   color: #dedede;
+   margin: 0;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: #16160e;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.right {
+    position: absolute;
+    right: 30px;;
+}
+
+
+nav img{
+    width: 45px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#title{
+    cursor: pointer;
+}
+
+.wrap{
+    width: 1000px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+a { 
+    text-decoration:none;
+}
+
+a:link {
+    color : #fff;
+}
+
+a:visited {
+     color : #fff;
+}
+
+h1{
+    font-size: 30px;
+    margin: 0px;
+}
+
+h2{
+    font-size: 50px;
+    transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.welcom p{
+    margin-bottom: 50px;
+}
+
+.menuList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hidden{
+    display: none;
+}
+
+.menuList li{
+    width: 350px;
+    height: 250px;
+    margin: 50px;
+    cursor: pointer;
+}
+
+.blur{
+    width: 350px;
+    height: 250px;
+    margin: 50px; 
+    background: #666 url(img/race.jpg) no-repeat ;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.blur:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -1; 
+} 
+  
+.menuList p {
+    color: white;
+    margin: 0;
+    text-align: center;
+    line-height: 250px;
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 0 10px 10px #333;
+}
+
+#race{
+    background: #666 url(img/race.jpg) no-repeat ;
+    background-size: cover;
+}
+
+#paddok{
+    background: #666 url(img/rukus.jpg) no-repeat ;
+    background-size: cover;
+}
+
+#winners{
+    background: #666 url(img/winers.jpg) no-repeat ;
+    background-size: cover;
+}
+
+#horse{
+    background: #666 url(img/horse.jpg) no-repeat ;
+    background-size: cover;
+}
+
+#jockey{
+    background: #666 url(img/jockey.jpg) no-repeat ;
+    background-size: cover;
+}
+
+.menu li:hover{
+    filter: blur(0px);
+} 
+
+
+ul{
+    list-style:none;
+}
+
+
+.thumbnails{
+    width: 900px;
+    margin:30px auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnails li{
+    margin : 50px;
+}
+
+.thumbnails img{
+    object-fit: contain;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+.thumbnails img:hover{
+    opacity: 1;
+}
+
+.thumbnails p{
+    margin-top:0;
+}
+
+footer {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+#page-top {
+    position: fixed;
+    bottom: 5px;
+    width: 50px;
+    right: 50px;
+    font-size: 50px;
+    transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  opacity: 0.4;
+}
+
+#page-top a {
+    background: rgba(102, 102, 102, 0.8);
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: rgba(144, 144, 144, 0.8);
+}
+
+
+
+.form-wrap{
+    width: 400px;
+    margin: 120px auto;
+    text-align: left;
+}
+
+select{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    color: #fff;
+    background: #000;
+}
+
+select:focus {
+    outline: 0;
+    cursor: pointer;
+}
+
+input{
+    width: 400px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    background: #000;
+    padding-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: 0;
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    font-size : 15px;
+}
+
+input[type="file"]{
+    width: 400px;
+    height: 30px;
+    font-size : 15px;
+}
+
